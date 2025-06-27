@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BUG WHATSAPP V1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #0f0;
+      padding: 20px;
+      text-align: center;
+    }
+    input, select, button {
+      margin: 10px;
+      padding: 10px;
+      width: 80%;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+    }
+    input, select {
+      background-color: #111;
+      color: #0f0;
+    }
+    button {
+      background-color: #0f0;
+      color: #000;
+      font-weight: bold;
+    }
+    .box {
+      border: 2px solid #0f0;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JUSTRY X1</h1>
+  <div class="box">
+    <label for="number">MASUKKAN NUMBER TARGET 601XX</label><br>
+    <input type="text" id="number" placeholder="601XXXXXXXX"><br>
+
+    <label for="type">TYPE BUG</label><br>
+    <select id="type">
+      <option value="crash_android">CRASH ANDROID</option>
+      <option value="crash_ios">CRASH IOS</option>
+      <option value="forceclose">FORCECLOSE</option>
+      <option value="delay">DELAY</option>
+      <option value="invis">DELAY INVIS</option>
+    </select><br>
+
+    <button onclick="sendBug()">SEND BUG</button>
+  </div>
+
+  <p id="result"></p>
+
+  <script>
+    function sendBug() {
+      const number = document.getElementById("number").value.trim();
+      const type = document.getElementById("type").value;
+
+      if (number === "") {
+        alert("OLA SYSTEM CREATE BY HERY");
+        return;
+      }
+
+      // Simulasi hantar bug
+      document.getElementById("result").innerHTML = 
+        "SENDING BUG <b>" + type.toUpperCase() + "</b> TO <b>" + number + "</b> VIRUS BUG <br><br>SUCCES SEND BUG";
+    }
+  </script>
+
+</body>
+</html>
